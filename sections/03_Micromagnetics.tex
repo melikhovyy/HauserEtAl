@@ -1,0 +1,27 @@
+\documentclass[../main.tex]{subfiles}
+ 
+\begin{document}
+
+\subsection{Correlation with micromagnetics:}
+
+In a statistical theory of a domain wall pinning by Kronm\"uller \cite{Kron} the relationships between defect density $N$ and the geometry of domains and domain walls are established, resulting in $H_c\propto \sqrt{N}$, $\chi_0\propto 1/\sqrt{N}$, and $\nu_R\propto 1/N$.
+
+Assuming that $N\propto p_0+p_{\rm C}$, it is possible to find the initial percentage of impurities, $p_0$, if we have $H_c$, $\chi_0$ or $\nu_R$ for at least two measurements for a different amount of known defects, $p_{\rm C}$, which are due to external influence, such as caused by irradiation or fatigue:
+\begin{equation}
+  \frac{H_{c,2}}{H_{c,1}} =
+  \sqrt{\frac{\nu_{R,1}}{\nu_{R,2}}} =
+  \frac{\chi_{0,1}}{\chi_{0,2}} =
+  \sqrt{\frac{p_0+p_{\rm C,2}}{p_0+p_{\rm C,1}}} \ ,
+  \label{chi012}
+\end{equation}
+where the indices 1 and 2 stand for different amount of known defects.
+
+As an example, let us consider the recently studied case of low carbon Fe-C steel samples with different percentage of C, which was analyzed by both models \cite{TMAG}. The model coefficients are summarized in Tab.~\ref{C}. Evaluating Eq.~(\ref{chi012}) for $\chi_0$ and $\nu_R$ for different wt \% C and averaging them over all combinations of $p_{\rm C}$ we find that $p_0=0.0269\%$ for the EM and $p_0=0.0388\%$ for the JAM. Figures~\ref{FigureEM} and \ref{FigureJAM} compare functions of $\sqrt{N}=\sqrt{p_0+p_{\rm C}}$ with the normalized $H_c$, $1/\chi_0$ and $\sqrt{1/\nu_R}$ for the EM and JAM, respectively. The values of $H_c$ of the major loop, which were computed using the expressions
+$H_c=k_{\rm H}/\mu_0 M_s$ and $H_c=k_{\rm J}\,(1-c)$
+for both EM and JAM \cite{TMAG}, show the best agreement with $\sqrt{N}$. However, $\chi_0$ cannot be used reliably due to the fact that $\chi_0$ is not directly comparable between JAM and EM \cite{TMAG}.
+
+All these considerations indicate that both models are capable to predict the initial percentage of impurities or defects in magnetic materials, if measurements with different densities, e.g. caused by fatigue or irradiation, are known.
+
+\cleardoublepage
+
+\end{document}

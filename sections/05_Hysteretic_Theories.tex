@@ -1,0 +1,91 @@
+\documentclass[../main.tex]{subfiles}
+ 
+\begin{document}
+
+\section{Hysteretic Theories}
+
+\subsection{Relation to the Stoner-Wohlfarth theory:}
+
+The following consideration represents an attempt to relate the coefficients of the JAM and EM
+to the well known approach of Stoner and Wohlfarth (SW) of coherent rotation \cite{Stoner48}.
+In order to achieve the directional dependence we use the uniaxial anisotropy
+energy density
+\begin{equation}
+  w_k = K_u \sin^2\varphi
+\end{equation}
+where $\varphi$ is the angle between $M$ and the easy axis. The ideal SW
+behavior is characterized by a rectangular loop in the $\varphi=0$ direction
+and $M=M_sH/H_k$ in the $\varphi=\pi/2$ direction \cite{Stoner48}.
+
+
+\subsection{Stoner-Wohlfarth theory and JAM calculations:}
+
+In order to identify the values of the JAM parameters, which will be used to describe the
+Stoner-Wohlfarth system, we consider their linear anisotropy dependence as was
+proposed earlier \cite{JMMM}:
+
+\begin{equation}
+  a = a_c+c_a\,{2\,K_u\over \mu_0 M_s} \sin^2\varphi \ ,
+%  \label{ca}
+\end{equation}
+\begin{equation}
+  \alpha = \alpha_c+c_\alpha\,{2\,K_u\over \mu_0 M_s^2} \sin^2\varphi \ ,
+\end{equation}
+\begin{equation}
+  N_i = {2\,K_u\over \mu_0 M_s^2} \sin^2\varphi
+\end{equation}
+with
+\begin{equation}
+  N_i=a/M_s-\alpha \ ,
+\end{equation}
+where $a_c$ and $\alpha_c$ are the corresponding values of $a$ and $\alpha$ at $\varphi=0$.
+ If $m=m_m=1-\delta$ with $0<\delta \ll 1$ at $H=H_k$ for both
+$\varphi=0$ and $\varphi=\pi/2$ then we can identify \cite{TMAG}
+\begin{equation}
+  a_c={H_k\over {\rm arctanh}{\,m_m}-m_m} \ ,
+\end{equation}
+\begin{equation}
+  \alpha_c={H_k\over M_s ({\rm arctanh}{\,m_m}-m_m)} \ ,
+\end{equation}
+\begin{equation}
+  c_\alpha = {H_k - (a_c+H_k)\,{\rm arctanh}{\,m_m} + \alpha_c\,M_s\,m_m\over
+              H_k\,({\rm arctanh}{\,m_m} - m_m)} \ ,
+\end{equation}
+and finally
+\begin{equation}
+  c_a=1+c_\alpha \ .
+\end{equation}
+For the case of $\varphi=0$, we have to set $c=0$ and $k_{\rm J}=H_k$, 
+which leads to $H_c=H_k$.
+For the case $\varphi=\pi/2$, we have to set $c=1$
+(which corresponds to reversible processes only) and $k_{\rm J}=0$,
+$H_c=0$. For calculations, very small value of $k_{\rm J}$ was taken to avoid
+numerical discontinuity.
+
+The SW behavior is then found when $\delta\to 0$, but this may cause numerical
+problems because of the large numbers involved. Lower $m_m$ at $H_k$ will result
+in a smooth transition into saturation, as often observed in real materials.
+
+Figure~\ref{jmsw} shows the JAM results for $\mu_0M_s=1$~T and $H_k=10$~kA/m.
+Both simulations $\varphi=0$ and $\varphi=\pi/2$ behave as expected. 
+In case of $\varphi=0$ the coercivity is slightly larger than expected $H_c=1.15 H_k$.
+
+\subsection{Stoner-Wohlfarth theory and EM calculations:}
+
+Similar considerations can be done for the EM. Here $k_{\rm H}=\mu_0M_sH_k$ and a variation of $q$ will be considered: $q=0$ in the
+$\varphi=\pi/2$ direction and $q\gg1$ in the $\varphi=0$ direction. In order to provide the SW behavior we set
+\begin{equation}
+  N_i = {2\,K_u \sin^2\varphi\over \mu_0 M_s^2}
+\end{equation}
+and
+\begin{equation}
+  2^g\,h = {2\,K_u \over \mu_0 M_s} \ .
+\end{equation}
+This results in $H_s=H_k$ both in the $\varphi=0$ and $\varphi=\pi/2$
+directions. Figure~\ref{emsw} shows the EM result for $\mu_0M_s=1$~T,
+$H_k=10$~kA/m, $g=120$, $h=10^{-33}$, $k_{\rm H}=10$~kJ/m$^3$, $q_0=60$ (the
+values of $g$, $h$, and $q_0$ are limited by the numerics).
+
+\cleardoublepage
+
+\end{document}

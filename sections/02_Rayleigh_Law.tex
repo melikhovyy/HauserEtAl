@@ -1,0 +1,96 @@
+\documentclass[../main.tex]{subfiles}
+ 
+\begin{document}
+
+\section{Rayleigh Law}
+
+\subsection{Initial magnetization and Rayleigh law:}
+
+The law of Lord Rayleigh describes the magnetization curve at low fields up to coercivity $H_c$ as a parabolic function:
+\begin{equation}
+  M = \chi_0\,H+\nu_R\,H^2 \ ,
+  \label{MRy}
+\end{equation}
+where $\chi_0=\d M/\d H$ at $M=H=0$ is the initial susceptibility and $\nu_R$ is the Rayleigh constant. If we use a second order Taylor series of the initial magnetization of the JAM and EM we can find the relationship between Rayleigh coefficients $\chi_0$ and $\nu_R$ and the coefficients of the JAM and EM.
+
+\subsection{Rayleigh law and JAM model equations:}
+
+The macroscopic magnetization $M(H)$ depending on the applied field $H$ in the JAM is represented by \cite{Jiles}
+\begin{equation}
+  M = c\,M_a + (1-c)\,M_i
+  \label{MJ}
+\end{equation}
+where $M_a$ is the anhysteretic magnetization, $M_i$ is the irreversible magnetization with
+\begin{equation}
+  M_i = M_a - k_{\rm J}\,{\d M_i\over \d H_i}
+  \label{Mi}
+\end{equation}
+for the initial magnetization, $c$ is the reversibility coefficient, $k_{\rm J}$ is the loss coefficient,
+\begin{equation}
+  H_i = H + \alpha M_i
+\end{equation}
+is the inner field, and $\alpha$ represents the domain coupling. In the following considerations we use a linear approximation of an anhysteretic function which is valid for one dimensional case (a hyperbolic tangent) at the origin:
+\begin{equation}
+  M_a = M_s\,{H+\alpha\,M\over a}
+  \label{MaJM}
+\end{equation}
+where $a$ represents the domain density, $\alpha$ is domain coupling
+and $M_s$ is the spontaneous
+magnetization (the geometric demagnetizing factor $N_d$ is neglected). Thus, the
+differential equation becomes linear in $H$ and $M$. Using $\d M_i/\d H_i=\d
+M_i/\d H\cdot \d H/\d H_i$ we find with Eqs.~(\ref{MJ}) -- (\ref{MaJM})
+\be
+{\d M\over \d H} = {H\,M_s \left[a\,(c-1)+c\,\alpha\,M_s\right]-
+                    M \left[a^2\,(c-1)+a\,\alpha\,M_s-c\,\alpha^2\,M_s^2\right]+
+                    a\,c\,k_{\rm J}\,M_s\,(c-1)\over
+                    \left[H\,\alpha\,M_s+\alpha\,M (\alpha\,M_s-a)+a\,k_{\rm J} (c-1)\right]
+                    (a-c\,\alpha\,M_s)}
+\label{dMH}
+\ee
+which can be solved, but yields a complex implicit function of $M$ and $H$. Calculating $\d^2 M/\d H^2$ from Eq.~(\ref{dMH}) we can write the second order Taylor series at $H=0$ as
+\be
+M(H) =  {c\,M_s\over a-c\,\alpha\,M_s} \left(H+
+        H^2\,{a^2\,(1-c)\over 2\,c\,k_{\rm J}\,(a-c\,\alpha\,M_s)^2}\right)
+  \label{RLJ}
+\ee
+and by comparing Eqs.~(\ref{MRy}) and (\ref{RLJ}) we find
+\begin{equation}
+  \chi_0 = {c\,M_s\,\over a-c\,\alpha\,M_s}
+    \label{X0J}
+\end{equation}
+and
+\begin{equation}
+  \nu_R = {a^2\,M_s\,(1-c)\over 2\,k_{\rm J}\,(a-c\,\alpha\,M_s)^3} \ .
+    \label{nuJ}
+\end{equation}
+
+
+\subsection{Rayleigh law and EM model equations:}
+
+The initial magnetization in the EM model with linear anhysteretic magnetization is represented by \cite{JAP75}
+\be
+H = (N_i+N_d)\,M+
+    \left({k_{\rm H}\over \mu_0 M_s}+
+    c_r\,h \left[\left((1+m)^{1+m} (1-m)^{1-m}\right)^{g/2}-1\right]\right)
+    \left(1-\exp\left[-q\,{M\over M_s}\right]\right)
+  \label{H}
+\ee
+where $N_i$ is the inner demagnetizing factor ($N_d$ is neglected), $k_{\rm H}$ is the loss coefficient, $q$ is a coefficient in the probability function of irreversible domain wall displacements (DWDs), $c_r=l/d$ is the ratio of domain width $l$ and thickness $d$, describing the increasing speed of DWDs with increasing $H$ \cite{JAP96}, and the coefficients $g$ and $h$ of the reversible field describe the saturation field $H_s=2^g\,h$ of DWDs. A second order Taylor series gives $M$ as a function of $H$ and another Taylor series at $H=0$ yields
+\begin{equation}
+  M = {\mu_0 M_s^2\over k_{\rm H}\,q + \mu_0 M_s^2\,N_i}
+\left(H + H^2\,{\mu_0 M_s\,k_{\rm H}\,q^2\over 2\,(k_{\rm H}\,q+\mu_0 M_s^2\,N_i)^2} \right)
+  \label{MRyEM}
+\end{equation}
+and by comparing Eqs.~(\ref{MRy}) and (\ref{MRyEM}) we find
+\begin{equation}
+  \chi_0 = {\mu_0\,M_s^2\over k_{\rm H}\,q + \mu_0\,M_s^2\,N_i}
+    \label{xEM}
+\end{equation}
+which is the same if we use the full model equations \cite{JAP96} and
+\begin{equation}
+  \nu_R = {\mu_0^2 M_s^3\,k_{\rm H}\,q^2\over 2\,(k_{\rm H}\,q+\mu_0\,M_s^2\,N_i)^3} \ .
+\end{equation}
+
+\cleardoublepage
+
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[../main.tex]{subfiles}
+ 
+\begin{document}
+
+\section{Anisotropy}
+
+\subsection{Coefficient relations to anisotropy at weak fields}
+
+Additionally, we can also relate some coefficients of the JAM and EM to
+magnetomechanical parameters of the material. The following
+considerations deal with elastic deformation only, plastic deformation
+leads to additional defects that could be treated as described above.
+
+The coercivity of many bulk soft magnetic materials is determined by inner
+stress $\sigma_i$ and isotropic magnetostriction constant $\lambda_s$ as
+\begin{equation}
+  H_c = {\lambda_s \sigma_i \over \mu_0 M_s}
+    \label{Hc}
+\end{equation}
+which has been discussed earlier by Kersten \cite{Kersten}. The inner stress
+$\sigma_i$ is mainly proportional to Young's modulus $E_Y$ as
+$\sigma_i\propto\lambda_sE_Y$ and we can define
+\begin{equation}
+  c_{k} = {\sigma_i\over \lambda_s E_Y}
+  \label{cks}
+\end{equation}
+with the microscopic constant $c_{k}>1$ ($c_{k}\approx 1$ in carefully
+stress relief annealed materials).
+The initial susceptibility can be related to the effective anisotropy
+in the case of magnetization rotation \cite{Kondorsky},
+\begin{equation}
+  \chi_0 = {1\over c_q}\,{\mu_0 M_s^2\over \Delta w} \ ,
+  \label{cq}
+\end{equation}
+where $c_q$ is dimensionless proportionality constant and $\Delta w$ represents
+the anisotropy energy maximum to be overcome during
+magnetization reversal. This is mainly the case in amorphous materials, where
+the initial susceptibility contribution of DWDs is small \cite{Appino}.
+But the domain structure is strongly effected by the anisotropy variation due to
+stress and a decreasing $\chi_0$ is expected also in DWD dominated magnetization
+processes.
+
+
+\subsection{Anisotropy and EM relations:}
+
+Using Eqs.~(\ref{Hc}) and (\ref{cks}), the coefficient $k_H$ is
+\begin{equation}
+  k_{\rm H} = c_{k} \lambda_s^2 E_Y \ .
+  \label{ks}
+\end{equation}
+Usually, $E_Y$ depends only little on $\sigma$ and an applied stress will only
+slightly modify $k_H$ and $H_c$; we can then consider the product $c_{k}E_Y$ to be
+constant.
+
+If we simplify Eq.~(\ref{xEM}) with $k_H\gg\mu_0\,M_s\,N_i$, which is valid for
+most materials (see, for example, Tab.~\ref{C}), by combining
+Eqs.~(\ref{xEM}) and ~(\ref{cq}) and using
+\begin{equation}
+	\Delta w = \left|{K_u-{3\over 2}\,(1+\nu_P)\,\lambda_s\,\sigma}\right|
+\end{equation}
+we can calculate the coefficient $q$
+\begin{equation}
+  q = c_q\,{\Delta w \over \mu_0 M_s^2} = c_q \left|{K_u-{3\over 2}\,(1+\nu_P)\,\lambda_s\,\sigma
+    \over c_{k} \lambda_s^2 E_Y}\right|
+  \label{qs}
+\end{equation}
+where $\nu_P$ is Poisson ratio. A constant $q_0$ could be added to the r.h.s.
+of the Eq.~(\ref{qs}) which considers that $\chi_0$ is not exclusively determined by
+magnetization rotation. $q=0$ would lead to the anhysteretic curve. $K_u$
+represents a small uniaxial anisotropy
+\cite{Appino},
+for instance arising from ordering effects \cite{Fujimori} which is responsible
+for a maximum $\chi_0$ at $\sigma\ne 0$.
+
+
+\subsection{Anisotropy and JAM relations:}
+
+Considering Eqs.~(\ref{Hc}) and (\ref{cks}) are related to pinning only
+($H_c\approx k_{\rm J}$), we find
+\begin{equation}
+  k_{\rm J} = c_k\,{\lambda_s^2\,E_Y\over \mu_0\,M_s} \ .
+\end{equation}
+If in Eq.~(\ref{X0J}) we let $a$ and $\alpha$ to be proportional to $\Delta w$ \cite{JMMM},
+we see that $\chi_0$ is decreasing with increasing stress. The coefficient $c$ will thus not significantly depend on $\sigma$ in most cases.
+
+\cleardoublepage
+
+\end{document}
